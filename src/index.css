@@ -1,96 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --background: 220 14% 8%;
+    --foreground: 220 9% 94%;
+    --card: 220 14% 11%;
+    --card-foreground: 220 9% 94%;
+    --popover: 220 14% 11%;
+    --popover-foreground: 220 9% 94%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 16%;
+    --secondary-foreground: 220 9% 94%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 262 83% 58%;
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom workspace colors */
+    --workspace-bg: 220 13% 10%;
+    --workspace-sidebar: 220 15% 8%;
+    --workspace-panel: 220 14% 14%;
+    --workspace-border: 220 13% 18%;
+    --workspace-text: 220 9% 76%;
+    --workspace-text-muted: 220 9% 46%;
+    --workspace-accent: 262 83% 58%;
+    --workspace-accent-glow: 262 83% 68%;
+    --workspace-success: 142 71% 45%;
+    --workspace-warning: 38 92% 50%;
+    --workspace-error: 0 84% 60%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Editor colors */
+    --editor-bg: 220 14% 6%;
+    --editor-line: 220 14% 12%;
+    --editor-selection: 262 50% 30%;
+    --editor-gutter: 220 9% 30%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Role colors */
+    --role-admin: 0 84% 60%;
+    --role-developer: 262 83% 58%;
+    --role-user: 199 89% 48%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(280 80% 50%) 100%);
+    --gradient-glow: radial-gradient(ellipse at center, hsl(262 83% 58% / 0.15) 0%, transparent 70%);
+    --gradient-panel: linear-gradient(180deg, hsl(220 14% 14%) 0%, hsl(220 14% 11%) 100%);
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.2);
+    --shadow-panel: 0 4px 24px hsl(0 0% 0% / 0.3);
+    --shadow-button: 0 2px 8px hsl(262 83% 58% / 0.3);
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 220 15% 8%;
+    --sidebar-foreground: 220 9% 76%;
+    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 16%;
+    --sidebar-accent-foreground: 220 9% 94%;
+    --sidebar-border: 220 13% 18%;
+    --sidebar-ring: 262 83% 58%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 220 14% 8%;
+    --foreground: 220 9% 94%;
+    --card: 220 14% 11%;
+    --card-foreground: 220 9% 94%;
+    --popover: 220 14% 11%;
+    --popover-foreground: 220 9% 94%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 16%;
+    --secondary-foreground: 220 9% 94%;
+    --muted: 220 14% 16%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 262 83% 58%;
   }
 }
 
@@ -99,7 +99,217 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    @apply dark;
   }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .workspace-layout {
+    @apply min-h-screen bg-[hsl(var(--workspace-bg))] text-[hsl(var(--workspace-text))];
+  }
+
+  .workspace-sidebar {
+    @apply bg-[hsl(var(--workspace-sidebar))] border-r border-[hsl(var(--workspace-border))];
+  }
+
+  .workspace-panel {
+    @apply bg-[hsl(var(--workspace-panel))] border border-[hsl(var(--workspace-border))] rounded-lg;
+    background: var(--gradient-panel);
+  }
+
+  .editor-container {
+    @apply bg-[hsl(var(--editor-bg))] rounded-lg font-mono text-sm;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .editor-line {
+    @apply border-b border-[hsl(var(--editor-line))];
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .role-badge {
+    @apply px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .role-admin {
+    @apply bg-[hsl(var(--role-admin)/0.2)] text-[hsl(var(--role-admin))] border border-[hsl(var(--role-admin)/0.3)];
+  }
+
+  .role-developer {
+    @apply bg-[hsl(var(--role-developer)/0.2)] text-[hsl(var(--role-developer))] border border-[hsl(var(--role-developer)/0.3)];
+  }
+
+  .role-user {
+    @apply bg-[hsl(var(--role-user)/0.2)] text-[hsl(var(--role-user))] border border-[hsl(var(--role-user)/0.3)];
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg transition-all duration-200;
+    @apply text-[hsl(var(--workspace-text-muted))] hover:text-[hsl(var(--workspace-text))] hover:bg-[hsl(var(--workspace-border)/0.5)];
+  }
+
+  .nav-item.active {
+    @apply text-[hsl(var(--primary))] bg-[hsl(var(--primary)/0.1)];
+  }
+
+  .btn-workspace {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    @apply bg-[hsl(var(--primary))] text-[hsl(var(--primary-foreground))] hover:brightness-110;
+    box-shadow: var(--shadow-button);
+  }
+
+  .btn-workspace:disabled {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  .btn-workspace-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-200;
+    @apply bg-[hsl(var(--workspace-border))] text-[hsl(var(--workspace-text))] hover:bg-[hsl(var(--workspace-border)/1.5)];
+  }
+
+  .input-workspace {
+    @apply w-full px-4 py-2.5 rounded-lg transition-all duration-200;
+    @apply bg-[hsl(var(--workspace-panel))] border border-[hsl(var(--workspace-border))];
+    @apply text-[hsl(var(--workspace-text))] placeholder:text-[hsl(var(--workspace-text-muted))];
+    @apply focus:outline-none focus:ring-2 focus:ring-[hsl(var(--primary)/0.5)] focus:border-[hsl(var(--primary))];
+  }
+
+  .card-workspace {
+    @apply p-6 rounded-xl border border-[hsl(var(--workspace-border))] bg-[hsl(var(--workspace-panel))];
+    background: var(--gradient-panel);
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  .text-workspace-text {
+    color: hsl(var(--workspace-text));
+  }
+
+  .text-workspace-text-muted {
+    color: hsl(var(--workspace-text-muted));
+  }
+
+  .text-role-admin {
+    color: hsl(var(--role-admin));
+  }
+
+  .text-role-developer {
+    color: hsl(var(--role-developer));
+  }
+
+  .text-role-user {
+    color: hsl(var(--role-user));
+  }
+
+  .bg-workspace-border {
+    background-color: hsl(var(--workspace-border));
+  }
+
+  .border-workspace-border {
+    border-color: hsl(var(--workspace-border));
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(262 83% 58% / 0.2);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(262 83% 58% / 0.4);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220 14% 11%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(220 13% 25%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(220 13% 35%);
+}
+
+/* Code syntax highlighting placeholder */
+.syntax-keyword {
+  color: hsl(280 80% 65%);
+}
+
+.syntax-string {
+  color: hsl(120 50% 60%);
+}
+
+.syntax-number {
+  color: hsl(30 80% 60%);
+}
+
+.syntax-comment {
+  color: hsl(220 9% 40%);
+  font-style: italic;
+}
+
+.syntax-function {
+  color: hsl(200 80% 65%);
+}
+
+.syntax-variable {
+  color: hsl(220 9% 85%);
 }
